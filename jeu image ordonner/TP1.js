@@ -1,4 +1,4 @@
-function ntm(ch)
+function _check_(ch)
 {
 	if(ch === 'undefined')
 		return '';
@@ -34,9 +34,9 @@ function int2letters(a) // This function works only when a-var is between 0 and 
 		if(Tab[1] != 0)
 		{
 			if(Tab[1] != 0 && Tab[1] != 7 && Tab[1] != 9)
-				chaine_retour = dixaines[Tab[1] - 1] + " " + ntm(chaine_retour);
+				chaine_retour = dixaines[Tab[1] - 1] + " " + _check_(chaine_retour);
 			else if((Tab[1] == 7 || Tab[1] == 9) && Tab[0] > 6)
-				chaine_retour = dixaines[Tab[1] - 2] + "-dix " + ntm(chaine_retour);
+				chaine_retour = dixaines[Tab[1] - 2] + "-dix " + _check_(chaine_retour);
 			else if((Tab[0] > 0 && Tab[0] < 7 && (Tab[1] == 1 || Tab[1] == 7 || Tab[1] == 9)) && (Tab[0] != 1 || Tab[1] != 7))
 			{
 				if(Tab[1] == 1)
@@ -45,7 +45,7 @@ function int2letters(a) // This function works only when a-var is between 0 and 
 					chaine_retour = dixaines[Tab[1] - 2] + "-" + chiant[Tab[0] - 1];		
 			}
 			else if(chaine_retour != '')
-				chaine_retour = dixaines[Tab[1] - 1] + " " + ntm(chaine_retour);
+				chaine_retour = dixaines[Tab[1] - 1] + " " + _check_(chaine_retour);
 		if(Tab[1] == 8 && Tab[0] == 0)
 			chaine_retour = dixaines[Tab[1] - 1] + 's';		
 				
@@ -57,9 +57,9 @@ function int2letters(a) // This function works only when a-var is between 0 and 
 			if((Tab[2] != 1) && (Tab[0] == 0) && (Tab[1] == 0))
 				chaine_retour = units[Tab[2] - 1] + " cents";
 			else if(Tab[2] == 1)
-				chaine_retour = 'cent ' + ntm(chaine_retour);	
+				chaine_retour = 'cent ' + _check_(chaine_retour);	
 			else if(Tab[2] != 1)
-				chaine_retour = units[Tab[2] - 1] + ' cent ' + ntm(chaine_retour);				
+				chaine_retour = units[Tab[2] - 1] + ' cent ' + _check_(chaine_retour);				
 		
 		}
 		
