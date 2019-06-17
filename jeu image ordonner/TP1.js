@@ -79,6 +79,7 @@ function generate_table()
 	
 	// Créer une balise <table> et <tbody>
 	var tbl = document.createElement("table");
+	tbl.className = 'table table-bordered table-striped';
 	var tblBody = document.createElement("tbody");
 
 	// Création des cellules
